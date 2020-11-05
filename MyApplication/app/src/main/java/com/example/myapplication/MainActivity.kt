@@ -12,7 +12,7 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-//import io.flutter.app.FlutterActivity
+// Import statement for `embedding` the Flutter Activity
 import io.flutter.embedding.android.FlutterActivity
 
 class MainActivity : AppCompatActivity() {
