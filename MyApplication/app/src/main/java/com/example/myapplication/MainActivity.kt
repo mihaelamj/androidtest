@@ -12,6 +12,8 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+//import io.flutter.app.FlutterActivity
+import io.flutter.embedding.android.FlutterActivity
 
 class MainActivity : AppCompatActivity() {
   //declare variables
@@ -75,9 +77,12 @@ class MainActivity : AppCompatActivity() {
     return true
   }
 
+  // when menu item is selected
   override fun onOptionsItemSelected(item: MenuItem): Boolean {
     if (item.itemId == R.id.actionAbout) {
       showInfo()
+    } else if (item.itemId == R.id.actionFlutter1) {
+      showFlutter1()
     }
     return true
   }
@@ -89,6 +94,11 @@ class MainActivity : AppCompatActivity() {
     builder.setTitle(dialogTitle)
     builder.setMessage(dialogMessage)
     builder.create().show()
+  }
+
+  private fun showFlutter1() {
+    val flutterAct = FlutterActivity.createDefaultIntent(this)
+    startActivity(flutterAct)
   }
 
   // When a device rotates on Android, the current `Activity` (a View) is destroyed, and a new one is created for the rotated state.

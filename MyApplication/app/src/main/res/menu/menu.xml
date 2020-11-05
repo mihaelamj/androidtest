@@ -3,6 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/actionFlutter1"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="@string/flutterMenu1"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/actionAbout"
         android:icon="@android:drawable/ic_dialog_info"
         android:title="@string/aboutMenu"
